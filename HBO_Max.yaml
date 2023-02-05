@@ -1,0 +1,14 @@
+payload:
+  # HBO MAX 
+  - DOMAIN,affiliatelogos.fly.cdn.hbogo.com
+  - DOMAIN,wmff.warnermediacdn.com
+  - DOMAIN-SUFFIX,api.hbo.com
+  - DOMAIN-SUFFIX,cinemax.com
+  - DOMAIN-SUFFIX,hbo.com
+  - DOMAIN-SUFFIX,hbogo.com
+  - DOMAIN-SUFFIX,hbomax.com
+  - DOMAIN-SUFFIX,hbomaxcdn.com
+  - DOMAIN-SUFFIX,hbonow.com
+  - DOMAIN-SUFFIX,iad.appboy.com
+  - DOMAIN-SUFFIX,maxgo.com
+  - PROCESS-NAME,com.hbo.hbonow
