@@ -1,0 +1,4 @@
+payload:
+  # 香港电视
+  - DOMAIN,cdn.hklive.tv
+  - DOMAIN-SUFFIX,hkdtmb.com
