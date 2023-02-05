@@ -1,0 +1,11 @@
+payload:
+  - IP-CIDR,0.0.0.0/8,no-resolve
+  - IP-CIDR,127.0.0.1/8,no-resolve
+  - IP-CIDR,10.10.10.10/31,no-resolve
+  - IP-CIDR,10.10.10.12/30,no-resolve
+  - IP-CIDR,10.10.10.16/28,no-resolve
+  - IP-CIDR,10.10.10.32/27,no-resolve
+  - IP-CIDR,10.10.10.64/26,no-resolve
+  - IP-CIDR,10.10.10.128/26,no-resolve
+  - IP-CIDR,10.10.10.192/29,no-resolve
+  - IP-CIDR,10.10.10.200/32,no-resolve
