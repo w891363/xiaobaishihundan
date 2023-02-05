@@ -1,0 +1,43 @@
+payload:
+  # Televizo 内部广告
+  - DOMAIN-KEYWORD,adx-
+  - DOMAIN,googleads.g.doubleclick.net
+  - DOMAIN,adx-drcn.op.dbankcloud.cn
+
+  # 酷安测试
+  - DOMAIN-SUFFIX,e.qq.com
+  - DOMAIN-SUFFIX,dm.pstatp.com
+  - DOMAIN-SUFFIX,c.sayhi.360.cn
+  - DOMAIN-SUFFIX,pangolin.snssdk.com
+  - DOMAIN-SUFFIX,pglstatp-toutiao.com
+  - DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+  - DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
+
+  # WPS Office 广告
+  - DOMAIN-SUFFIX,aaid.umeng.com
+  - DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao-b.com
+  - DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao.com
+  - DOMAIN-SUFFIX,b-gtc.gepush.com
+  - DOMAIN-SUFFIX,cloudservice22.kingsoft-office-service.com
+  - DOMAIN-SUFFIX,errlog.umeng.com
+  - DOMAIN-SUFFIX,mi.gdt.qq.com
+  - DOMAIN-SUFFIX,mo.res.wpscdn.cn
+  - DOMAIN-SUFFIX,qzs.gdtimg.com
+  - DOMAIN-SUFFIX,sdk-open-phone.getui.com
+  - DOMAIN-SUFFIX,sdk.e.qq.com
+  - DOMAIN-SUFFIX,sf3-fe-tos.pglstatp-toutiao.com
+  - DOMAIN-SUFFIX,tobapplog.ctobsnssdk.com
+  - DOMAIN-SUFFIX,toblog.ctobsnssdk.com
+  
+  # Google CN
+  - DOMAIN-SUFFIX,google.cn
+  
+  # Netease Music Advertising
+  - DOMAIN,admusicpic.music.126.net
+  - DOMAIN,iadmat.nosdn.127.net
+  - DOMAIN,iadmusicmat.music.126.net
+  - DOMAIN,iadmusicmatvideo.music.126.net
+
+  # 网易邮箱大师
+  - DOMAIN-SUFFIX,tdid.m.qq.com
+  - DOMAIN-SUFFIX,nex.163.com
