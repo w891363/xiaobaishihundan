@@ -1,0 +1,9 @@
+payload:
+  # TED
+  - DOMAIN-SUFFIX,litix.io
+  - DOMAIN-SUFFIX,api.airbrake.io
+  - DOMAIN-SUFFIX,api.leanplum.com
+  - DOMAIN-SUFFIX,ted.com
+  - DOMAIN-SUFFIX,bugsnag.com
+  - DOMAIN-SUFFIX,tedcdn.com
+  - PROCESS-NAME,com.ted.android
