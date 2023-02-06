@@ -1,10 +1,15 @@
 payload:
   # PikPak
+  - DOMAIN,access.mypikpak.com
+  - DOMAIN-KEYWORD,dl-a10b
+  - DOMAIN-KEYWORD,mypikpak
+  - DOMAIN-KEYWORD,pikpak
   - DOMAIN-SUFFIX,dlandroid.rcv.sandai.net
   - DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net
   - DOMAIN-SUFFIX,hub5pn.wap.sandai.net
   - DOMAIN-SUFFIX,hub5pnc.sandai.net
   - DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net
   - DOMAIN-SUFFIX,hubciddata.sandai.net
-  - DOMAIN-KEYWORD,mypikpak
-  - PROCESS-NAME,com.pikcloud.pikpak
+  - DOMAIN-SUFFIX,mypikpak.com
+  - DOMAIN-SUFFIX,pikpak.com
+  - PROCESS-NAME,com.pikcloud.pikpak  
