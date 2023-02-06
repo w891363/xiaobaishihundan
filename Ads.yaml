@@ -41,3 +41,5 @@ payload:
   # 网易邮箱大师
   - DOMAIN-SUFFIX,tdid.m.qq.com
   - DOMAIN-SUFFIX,nex.163.com
+
+  - DOMAIN-SUFFIX,stg-data.ads.heytapmobi.com
