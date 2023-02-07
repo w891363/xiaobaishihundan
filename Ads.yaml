@@ -42,4 +42,10 @@ payload:
   - DOMAIN-SUFFIX,tdid.m.qq.com
   - DOMAIN-SUFFIX,nex.163.com
 
+  # OnePlus 商店开屏广告
   - DOMAIN-SUFFIX,stg-data.ads.heytapmobi.com
+
+  # Web Ads
+  - DOMAIN-SUFFIX,zz.bdstatic.com
+  - DOMAIN-SUFFIX,hm.baidu.com
+  - DOMAIN-SUFFIX,zhanzhang.toutiao.com
