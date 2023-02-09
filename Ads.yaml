@@ -49,3 +49,18 @@ payload:
   - DOMAIN-SUFFIX,zz.bdstatic.com
   - DOMAIN-SUFFIX,hm.baidu.com
   - DOMAIN-SUFFIX,zhanzhang.toutiao.com
+
+  # 大师兄影视
+  - DOMAIN-SUFFIX,ali-ad.a.yximgs.com
+  - DOMAIN-SUFFIX,cfg.imtt.qq.com
+  - DOMAIN-SUFFIX,dc.sigmob.cn
+  - DOMAIN-SUFFIX,gdt.qq.com
+  - DOMAIN-SUFFIX,js-ad.a.yximgs.com
+  - DOMAIN-SUFFIX,open.e.kuaishou.cn
+  - DOMAIN-SUFFIX,p1-feedback.byteimg.com
+  - DOMAIN-SUFFIX,qzs.gdtimg.com
+  - DOMAIN-SUFFIX,sdktmp.hubcloud.com.cn
+  - DOMAIN-SUFFIX,tdid.m.qq.com
+  - DOMAIN-SUFFIX,tx-ad.a.yximgs.com
+  - DOMAIN-SUFFIX,ulogs.umengcloud.com
+  - DOMAIN-SUFFIX,umeng.com.gds.alibabadns.com
