@@ -51,12 +51,14 @@ payload:
   - DOMAIN-SUFFIX,zhanzhang.toutiao.com
 
   # 大师兄影视
+  - DOMAIN-SUFFIX,adservice.sigmob.cn
   - DOMAIN-SUFFIX,ali-ad.a.yximgs.com
   - DOMAIN-SUFFIX,cfg.imtt.qq.com
   - DOMAIN-SUFFIX,dc.sigmob.cn
   - DOMAIN-SUFFIX,gdt.qq.com
   - DOMAIN-SUFFIX,js-ad.a.yximgs.com
   - DOMAIN-SUFFIX,open.e.kuaishou.cn
+  - DOMAIN-SUFFIX,open.e.kuaishou.com
   - DOMAIN-SUFFIX,p1-feedback.byteimg.com
   - DOMAIN-SUFFIX,qzs.gdtimg.com
   - DOMAIN-SUFFIX,sdktmp.hubcloud.com.cn
