@@ -33,10 +33,13 @@ payload:
   - DOMAIN-SUFFIX,google.cn
   
   # Netease Music Advertising
-  - DOMAIN,admusicpic.music.126.net
-  - DOMAIN,iadmat.nosdn.127.net
-  - DOMAIN,iadmusicmat.music.126.net
-  - DOMAIN,iadmusicmatvideo.music.126.net
+  - DOMAIN-SUFFIX,admusicpic.music.126.net
+  - DOMAIN-SUFFIX,clientlog3.music.163.com
+  - DOMAIN-SUFFIX,da.netease.com
+  - DOMAIN-SUFFIX,iadmat.nosdn.127.net
+  - DOMAIN-SUFFIX,iadmusicmat.music.126.net
+  - DOMAIN-SUFFIX,iadmusicmatvideo.music.126.net
+  - DOMAIN-SUFFIX,mam.netease.com
 
   # 网易邮箱大师
   - DOMAIN-SUFFIX,tdid.m.qq.com
