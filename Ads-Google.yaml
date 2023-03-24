@@ -97,8 +97,6 @@ payload:
   - DOMAIN-SUFFIX,id.google.no
   - DOMAIN-SUFFIX,id.google.ru
   - DOMAIN-SUFFIX,id.google.us
-  - DOMAIN-SUFFIX,imasdk.googleapis.com
-  - DOMAIN-SUFFIX,jnn-pa.googleapis.com
   - DOMAIN-SUFFIX,kmmgoogle.oss-ap-southeast-1.aliyuncs.com
   - DOMAIN-SUFFIX,lh3.googleadsserving.cn
   - DOMAIN-SUFFIX,linux2.googlerenewals.net
