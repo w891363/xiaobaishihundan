@@ -69,3 +69,10 @@ payload:
   - DOMAIN-SUFFIX,tx-ad.a.yximgs.com
   - DOMAIN-SUFFIX,ulogs.umengcloud.com
   - DOMAIN-SUFFIX,umeng.com.gds.alibabadns.com
+
+  # 拦截追踪器
+  - DOMAIN-SUFFIX,appcenter.ms
+  - DOMAIN-SUFFIX,app-measurement.com
+  - DOMAIN-SUFFIX,firebase.io
+  - DOMAIN-SUFFIX,crashlytics.com
+  - DOMAIN-SUFFIX,google-analytics.com
