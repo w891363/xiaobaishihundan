@@ -5,7 +5,6 @@ payload:
 
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
 # > 交管12123
-  - DOMAIN,static.122.gov.cn
   - DOMAIN-SUFFIX,v3.fstats.xyz
   - DOMAIN-SUFFIX,wss.haoyundmn.com
   - DOMAIN-SUFFIX,new.xiongzhangad.com
