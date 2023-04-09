@@ -45,4 +45,4 @@ payload:
   - IP-CIDR,18.141.84.24/32,no-resolve 
   - IP-CIDR,18.194.67.83/32,no-resolve 
   - IP-CIDR,54.150.52.31/32,no-resolve 
-  - IP-CIDR,54.180.64.186/32,no-resolve 
+  - IP-CIDR,54.180.64.186/32,no-resolve
