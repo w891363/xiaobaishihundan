@@ -1,3 +1,4 @@
 payload:
   # 放行规则
-  - DOMAIN-SUFFIX,litix.io
+  - DOMAIN-SUFFIX,ted.com
+  - DOMAIN-SUFFIX,tedcdn.com
