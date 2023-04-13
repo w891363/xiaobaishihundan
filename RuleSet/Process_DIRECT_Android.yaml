@@ -1,0 +1,62 @@
+# >> Process For Android
+# >> Work for Android Only!!!
+# >> Use DIRECT policy
+payload:
+  # >> 阿里云盘
+  - PROCESS-NAME,com.alicloud.databox
+  # >> 百度网盘
+  - PROCESS-NAME,com.baidu.netdisk
+  # >> bilibili
+  - PROCESS-NAME,com.bilibili.app.in
+  # >> 菜鸟
+  - PROCESS-NAME,com.cainiao.wireless
+  # >> 大师兄
+  - PROCESS-NAME,com.dogal.kenhuangzhe.geh.dashixiong
+  # >> 抖音
+  - PROCESS-NAME,com.ss.android.ugc.aweme
+  # >> 黄油相机
+  - PROCESS-NAME,com.by.butter.camera
+  # >> 虎牙直播
+  - PROCESS-NAME,com.huya.kiwi
+  # >> 交管12123
+  - PROCESS-NAME,com.tmri.app.main
+  # >> 酷狗
+  - PROCESS-NAME,com.kugou.android.lite
+  # >> 美团
+  - PROCESS-NAME,com.sankuai.meituan
+  # >> 拼多多
+  - PROCESS-NAME,com.xunmeng.pinduoduo
+  # >> QQ
+  - PROCESS-NAME,com.tencent.mobileqq
+  # >> 全能扫描王
+  - PROCESS-NAME,com.intsig.camscanner
+  # >> 数字人民币
+  - PROCESS-NAME,cn.gov.pbc.dcep
+  # >> 淘宝
+  - PROCESS-NAME,com.taobao.taobao
+  # >> 腾讯地图
+  - PROCESS-NAME,com.tencent.map
+  # >> 腾讯会议
+  - PROCESS-NAME,com.tencent.wemeet.app
+  # >> OPPO天气
+  - PROCESS-NAME,com.coloros.weather
+  # >> 铁路12306
+  - PROCESS-NAME,com.MobileTicket
+  # >> 网易邮箱大师
+  - PROCESS-NAME,com.netease.mail
+  # >> 微信
+  - PROCESS-NAME,com.tencent.mm
+  # >> WPS Office
+  - PROCESS-NAME,cn.wps.moffice_eng
+  # >> 一木记账
+  - PROCESS-NAME,com.wangc.bill
+  # >> 云闪付
+  - PROCESS-NAME,com.unionpay
+  # >> 支付宝
+  - PROCESS-NAME,com.eg.android.AlipayGphone
+  # >> 中国工商银行
+  - PROCESS-NAME,com.icbc
+  # >> 中国建设银行
+  - PROCESS-NAME,com.chinaworld.main
+  # >> 中国银行
+  - PROCESS-NAME,com.chinaworld.bocmbci
