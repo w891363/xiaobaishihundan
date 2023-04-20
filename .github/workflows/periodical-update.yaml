@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: Generate GeoIP2 database
+    name: Generate GeoIP2 list
     runs-on: ubuntu-latest
     steps:
 
@@ -66,23 +66,19 @@ jobs:
         cd dist
         ./ipip2mmdb -s ./Geo_ASN_China_All.yaml -d Country.mmdb
         cd $CURRENT_DIR
-
     - name: Push artifacts to release branch
       run: |
         git config --local user.email "523537295@qq.com"
         git config --local user.name "FaNGbABa"
-
         git fetch
         git checkout release
-
         git checkout --orphan release-orphan
         git rm -rf .
-
         cp -rf dist/Geo_ASN_China_All.yaml ./
-
+        cp -rf dist/Country.mmdb ./
+        git add Country.mmdb
         git add Geo_ASN_China_All.yaml
         git commit -am "Updated at $(date)"
-
         git branch -D release
         git branch -m release
             
