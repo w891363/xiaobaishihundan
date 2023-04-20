@@ -36,8 +36,8 @@ jobs:
 
     - name: Obtain CN IP lists
       run: |
-        curl -LR -o dist/ipip_net.txt "https://download-1302801676.cos.ap-shanghai.myqcloud.com/Geo_AS_IP/Geo_AS_IP_CN_All.txt"
-        curl -LR -o dist/chunzhen.txt "https://ispip.clang.cn/othernet_ipv6.txt"
+        curl -LR -o dist/chunzhen.txt "https://ruleset.isagood.day/dns/china_ip_list.txt"
+        curl -LR -o dist/chunzhen1.txt "https://ruleset.isagood.day/dns/china_ip_list.txt"
   
     - name: Merge and IP lists and remove duplicates
       run: |
