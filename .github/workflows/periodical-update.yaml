@@ -72,6 +72,7 @@ jobs:
         awk 'FNR==1{print ""}{print}' dist/*.txt > dist/merge.txt
         awk '!seen[$0]++' dist/merge.txt > dist/Geo_ASN_China_All.yaml
         sed -i '1d' dist/Geo_ASN_China_All.yaml
+        sed -i '/#/d' dist/Geo_ASN_China_All.yaml
         sed -i "s/^/  - '&/g" dist/Geo_ASN_China_All.yaml
         sed -i "s/$/&'/g" dist/Geo_ASN_China_All.yaml
         sed -i '1i payload:' dist/Geo_ASN_China_All.yaml
