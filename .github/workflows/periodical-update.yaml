@@ -36,13 +36,42 @@ jobs:
 
     - name: Obtain CN IP lists
       run: |
-        curl -LR -o dist/chunzhen.txt "https://ruleset.isagood.day/dns/china_ip_list.txt"
-        curl -LR -o dist/chunzhen1.txt "https://ruleset.isagood.day/dns/china_ip_list.txt"
+        curl -LR -o dist/17mon_chnroute.txt "https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt"
+        curl -LR -o dist/ChanthMiao_chnroute_v4.txt "https://raw.githubusercontent.com/ChanthMiao/China-IPv4-List/release/cn.txt"
+        curl -LR -o dist/ChanthMiao_chnroute_v6.txt "https://raw.githubusercontent.com/ChanthMiao/China-IPv6-List/release/cn6.txt"
+        curl -LR -o dist/Geo_AS_IP_CN_All.txt "https://download-1302801676.cos.ap-shanghai.myqcloud.com/Geo_AS_IP/Geo_AS_IP_CN_All.txt"
+        curl -LR -o dist/all_cn.txt "https://ispip.clang.cn/all_cn.txt"
+        curl -LR -o dist/all_cn_cidr.txt "https://ispip.clang.cn/all_cn_cidr.txt"
+        curl -LR -o dist/all_cn_ipv6.txt "https://ispip.clang.cn/all_cn_ipv6.txt"
+        curl -LR -o dist/carrnot_chnroute.txt "https://raw.githubusercontent.com/carrnot/china-ip-list/release/ip.txt"
+        curl -LR -o dist/cernet.txt "https://ispip.clang.cn/cernet.txt"
+        curl -LR -o dist/cernet_ipv6.txt "https://ispip.clang.cn/cernet_ipv6.txt"
+        curl -LR -o dist/chinatelecom.txt "https://ispip.clang.cn/chinatelecom.txt"
+        curl -LR -o dist/chinatelecom_ipv6.txt "https://ispip.clang.cn/chinatelecom_ipv6.txt"
+        curl -LR -o dist/chunzhen.txt "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/CN.txt"
+        curl -LR -o dist/cmcc.txt "https://ispip.clang.cn/cmcc.txt"
+        curl -LR -o dist/cmcc_ipv6.txt "https://ispip.clang.cn/cmcc_ipv6.txt"
+        curl -LR -o dist/cn.txt "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cn.txt"
+        curl -LR -o dist/crtc.txt "https://ispip.clang.cn/crtc.txt"
+        curl -LR -o dist/crtc_ipv6.txt "https://ispip.clang.cn/crtc_ipv6.txt"
+        curl -LR -o dist/gwbn.txt "https://ispip.clang.cn/gwbn.txt"
+        curl -LR -o dist/gwbn_ipv6.txt "https://ispip.clang.cn/gwbn_ipv6.txt"
+        curl -LR -o dist/ipip_net.txt "https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt"
+        curl -LR -o dist/mayaxcn_chnroute.txt "https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt"
+        curl -LR -o dist/misakaio_chnroutes.txt "https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt"
+        curl -LR -o dist/missuo_chnroute.txt "https://raw.githubusercontent.com/missuo/ASN-China/main/IP.China.list"
+        curl -LR -o dist/othernet.txt "https://ispip.clang.cn/othernet.txt"
+        curl -LR -o dist/othernet_ipv6.txt "https://ispip.clang.cn/othernet_ipv6.txt"
+        curl -LR -o dist/tmplink_chnroute.txt "https://raw.githubusercontent.com/tmplink/IPDB/main/ipv4/cidr/CN.txt"
+        curl -LR -o dist/unicom_cnc.txt "https://ispip.clang.cn/unicom_cnc.txt"
+        curl -LR -o dist/unicom_cnc_ipv6.txt "https://ispip.clang.cn/unicom_cnc_ipv6.txt"
+        curl -LR -o dist/wendellouyang_chnroute.txt "https://raw.githubusercontent.com/wendellouyang/geolite2_china_ip_list/main/chnip.txt"
   
     - name: Merge and IP lists and remove duplicates
       run: |
         awk 'FNR==1{print ""}{print}' dist/*.txt > dist/merge.txt
         awk '!seen[$0]++' dist/merge.txt > dist/Geo_ASN_China_All.yaml
+        sed -i '1d' dist/Geo_ASN_China_All.yaml
         sed -i "s/^/  - '&/g" dist/Geo_ASN_China_All.yaml
         sed -i "s/$/&'/g" dist/Geo_ASN_China_All.yaml
         sed -i '1i payload:' dist/Geo_ASN_China_All.yaml
