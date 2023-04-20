@@ -78,7 +78,7 @@ jobs:
 
         awk '!seen[$0]++' AntiAd/01merge.txt > AntiAd/ACL4SSR_AntiAd.yaml
 
-    - name: Push artifacts to release branch
+    - name: Push artifacts to adblock branch
 
       run: |
 
@@ -88,9 +88,9 @@ jobs:
 
         git fetch
 
-        git checkout release
+        git checkout adblock
 
-        git checkout --orphan release-orphan
+        git checkout --orphan adblock-orphan
 
         git rm -rf .
 
@@ -100,9 +100,9 @@ jobs:
 
         git commit -am "Updated at $(date)"
 
-        git branch -D release
+        git branch -D adblock
 
-        git branch -m release
+        git branch -m adblock
 
             
 
@@ -114,6 +114,6 @@ jobs:
 
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
-        branch: release
+        branch: adblock
 
         force: true
