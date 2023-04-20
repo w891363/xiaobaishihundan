@@ -36,23 +36,13 @@ jobs:
 
     - name: Obtain CN IP lists
       run: |
-        curl -LR -o dist/ipip_net.txt "https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt"
-        curl -LR -o dist/chunzhen.txt "https://raw.githubusercontent.com/metowolf/iplist/master/data/country/CN.txt"
-        curl -LR -o dist/all_cn_cidr.txt "https://ispip.clang.cn/all_cn_cidr.txt"
-        curl -LR -o dist/all_cn.txt "https://ispip.clang.cn/all_cn.txt"
-        curl -LR -o dist/chinatelecom.txt "https://ispip.clang.cn/chinatelecom.txt"
-        curl -LR -o dist/unicom_cnc.txt "https://ispip.clang.cn/unicom_cnc.txt"
-        curl -LR -o dist/cmcc.txt "https://ispip.clang.cn/cmcc.txt"
-        curl -LR -o dist/crtc.txt "https://ispip.clang.cn/crtc.txt"
-        curl -LR -o dist/cernet.txt "https://ispip.clang.cn/cernet.txt"
-        curl -LR -o dist/gwbn.txt "https://ispip.clang.cn/gwbn.txt"
-        curl -LR -o dist/othernet.txt "https://ispip.clang.cn/othernet.txt"
+        curl -LR -o dist/ipip_net.txt "https://download-1302801676.cos.ap-shanghai.myqcloud.com/Geo_AS_IP/Geo_AS_IP_CN_All.txt"
+        curl -LR -o dist/chunzhen.txt "https://ruleset.isagood.day/dns/china_ip_list.txt"
   
     - name: Merge and IP lists and remove duplicates
       run: |
         awk 'FNR==1{print ""}{print}' dist/*.txt > dist/merge.txt
         awk '!seen[$0]++' dist/merge.txt > dist/Geo_ASN_China_All.yaml
-        sed -i '1d' dist/Geo_ASN_China_All.yaml
         sed -i "s/^/  - '&/g" dist/Geo_ASN_China_All.yaml
         sed -i "s/$/&'/g" dist/Geo_ASN_China_All.yaml
         sed -i '1i payload:' dist/Geo_ASN_China_All.yaml
