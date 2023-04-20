@@ -57,12 +57,6 @@ jobs:
         sed -i "s/$/&'/g" dist/Geo_ASN_China_All.yaml
         sed -i '1i payload:' dist/Geo_ASN_China_All.yaml
 
-    - name: Generate GeoIP2 database
-      run: |
-        CURRENT_DIR=$(pwd)
-        cd dist
-        ./ipip2mmdb -s ./Geo_ASN_China_All.yaml -d Country.mmdb
-        cd $CURRENT_DIR
     - name: Push artifacts to release branch
       run: |
         git config --local user.email "523537295@qq.com"
@@ -72,8 +66,6 @@ jobs:
         git checkout --orphan release-orphan
         git rm -rf .
         cp -rf dist/Geo_ASN_China_All.yaml ./
-        cp -rf dist/Country.mmdb ./
-        git add Country.mmdb
         git add Geo_ASN_China_All.yaml
         git commit -am "Updated at $(date)"
         git branch -D release
