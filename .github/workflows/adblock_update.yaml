@@ -1,0 +1,123 @@
+name: Update ACL4SSR AD RULES
+
+on:
+
+  push:
+
+    branches: [ main ]
+
+  workflow_dispatch:
+
+  schedule: 
+
+    - cron:  '0 2 */3 * *'
+
+jobs:
+
+  build:
+
+    name: Generate ACL4SSR AD RULES list
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Set up Go 1.x
+
+      uses: actions/setup-go@v2
+
+      with:
+
+        go-version: ^1.14
+
+      id: go
+
+    - name: Check out code into the Go module directory
+
+      uses: actions/checkout@v2
+
+    - name: Get dependencies
+
+      run: |
+
+        go get -v -t -d ./...
+
+        if [ -f Gopkg.toml ]; then
+
+            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+
+            dep ensure
+
+        fi
+
+    - name: Create AntiAd folder
+
+      run: mkdir -p AntiAd
+
+    - name: Obtain AD lists
+
+      run: |
+
+        curl -LR -o AntiAd/1.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyList.yaml"
+
+        curl -LR -o AntiAd/2.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
+
+        curl -LR -o AntiAd/3.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyPrivacy.yaml"
+
+        curl -LR -o AntiAd/4.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
+
+        curl -LR -o AntiAd/5.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+
+        curl -LR -o AntiAd/6.txt "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml"
+
+    - name: Merge lists and remove duplicates
+
+      run: |
+
+        awk 'FNR==1{print ""}{print}' AntiAd/*.txt > AntiAd/01merge.txt
+
+        awk '!seen[$0]++' AntiAd/01merge.txt > AntiAd/Anti-Ad_Classical.yaml
+
+        sed -i '1d' AntiAd/Anti-Ad_Classical.yaml
+
+        sed -i '/#/d' AntiAd/Anti-Ad_Classical.yaml
+
+        
+
+    - name: Push artifacts to adblock branch
+
+      run: |
+
+        git config --local user.email "523537295@qq.com"
+
+        git config --local user.name "FaNGbABa"
+
+        git fetch
+
+        git checkout adblock
+
+        git checkout --orphan adblock-orphan
+
+        git rm -rf .
+
+        cp -rf AntiAd/Anti-Ad_Classical.yaml ./
+
+        git add Anti-Ad_Classical.yaml
+
+        git commit -am "Updated at $(date)"
+
+        git branch -D adblock
+
+        git branch -m adblock
+
+    - name: GitHub Push
+
+      uses: ad-m/github-push-action@v0.6.0
+
+      with:
+
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+        branch: adblock
+
+        force: true
