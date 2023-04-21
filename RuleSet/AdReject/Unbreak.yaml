@@ -4,6 +4,8 @@ payload:
   - DOMAIN-SUFFIX,tedcdn.com
   - DOMAIN-SUFFIX,ap6.ssl.msdk.qq.com
   - DOMAIN-SUFFIX,static.122.gov.cn
+  - DOMAIN-SUFFIX,flurry.com
+  - DOMAIN-SUFFIX,bugsnag.com
   # > Google
   - DOMAIN-SUFFIX,blog.google
   - DOMAIN-SUFFIX,googletraveladservices.com
