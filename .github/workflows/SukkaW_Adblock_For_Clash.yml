@@ -41,8 +41,8 @@ jobs:
     - name: Merge lists and remove duplicates
       run: |
         awk 'FNR==1{print ""}{print}' SukkaW/*.txt > SukkaW/SukkaW_merge.txt
-        sort SukkaW/SukkaW_merge.txt | awk '{print}'
         awk '!seen[$0]++' SukkaW/SukkaW_merge.txt > SukkaW/SukkaW_Adblock_For_Clash.yaml
+        awk '{print $0 | "sort"}' SukkaW/SukkaW_Adblock_For_Clash.yaml
         sed -i '/#/d' SukkaW/SukkaW_Adblock_For_Clash.yaml
         sed -i '/^\s*$/d' SukkaW/SukkaW_Adblock_For_Clash.yaml
         sed -i 's/^\.//' SukkaW/SukkaW_Adblock_For_Clash.yaml
