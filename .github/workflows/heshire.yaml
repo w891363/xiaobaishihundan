@@ -51,7 +51,7 @@ jobs:
         awk '!seen[$0]++' ceshi/02merge.txt > ceshi/ceshi.yaml
         sed -i '/#/d' ceshi/ceshi.yaml
         sed -i '2d' ceshi/ceshi.yaml
-        awk '{print $0}' ceshi/ceshi.yaml | sort -k1
+        awk '{print $0 | "sort"}' ceshi/ceshi.yaml
         sed -i '1i payload:' ceshi/ceshi.yaml
 
     - name: Push artifacts to woshiyishi branch
