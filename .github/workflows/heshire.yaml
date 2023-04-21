@@ -35,29 +35,16 @@ jobs:
 
     - name: Obtain AD lists
       run: |
-        curl -LR -o ceshi/8.txt "https://cdn.jsdelivr.net/gh/FaNGbABa/xiaobaishihundan@main/RuleSet/AdReject/Ad_Normal.yaml"
-        curl -LR -o ceshi/1.txt "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list"
-        sed -i 's/reject//g' ceshi/1.txt
-        sed -i 's/REJECT//g' ceshi/1.txt
-        sed -i 's/[[:space:]]//g' ceshi/1.txt
-        sed -i 's/HOST/DOMAIN/g' ceshi/1.txt
-        sed -i 's/suffix/SUFFIX/g' ceshi/1.txt
-        sed -i 's/keyword/KEYWORD/g' ceshi/1.txt
-        sed -i 's/host/DOMAIN/g' ceshi/1.txt
-        sed -i 's/ip-cidr/IP-CIDR/g' ceshi/1.txt
-        sed -i '/IP6-CIDR/d' ceshi/1.txt
-        sed -i '/USER-AGENT/d' ceshi/1.txt
-        sed -i 's/.$//' ceshi/1.txt
-        sed -i "s/^/  - &/g" ceshi/1.txt
-        sed -i '/payload/d' ceshi/8.txt
+        curl -LR -o ceshi/1.txt "https://ruleset.skk.moe/List/domainset/reject_phishing.conf"
+        curl -LR -o ceshi/2.txt "https://ruleset.skk.moe/List/domainset/reject.conf"
         
     - name: Merge lists and remove duplicates
       run: |
         awk 'FNR==1{print ""}{print}' ceshi/*.txt > ceshi/02merge.txt
         awk '!seen[$0]++' ceshi/02merge.txt > ceshi/ceshi.yaml
         sed -i '/#/d' ceshi/ceshi.yaml
-        sed -i '2d' ceshi/ceshi.yaml
-        awk '{print $0 | "sort"}' ceshi/ceshi.yaml
+        sed -i "s/^/  - '+&/g" ceshi/ceshi.yaml
+        sed -i "s/$/&'/g" ceshi/ceshi.yaml
         sed -i '1i payload:' ceshi/ceshi.yaml
 
     - name: Push artifacts to woshiyishi branch
