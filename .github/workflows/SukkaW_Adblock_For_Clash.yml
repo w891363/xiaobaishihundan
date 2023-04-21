@@ -1,0 +1,70 @@
+name: Update SukkaW's Reject Rules
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule: 
+    - cron:  '0 2 */3 * *'
+
+jobs:
+  build:
+    name: Generate SukkaW's Reject Rules DOMAIN-SET To RULE-SET
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Set up Go 1.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: ^1.14
+      id: go
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+
+    - name: Get dependencies
+      run: |
+        go get -v -t -d ./...
+        if [ -f Gopkg.toml ]; then
+            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+            dep ensure
+        fi
+
+    - name: Create SukkaW folder
+      run: mkdir -p SukkaW
+
+    - name: Obtain AD lists
+      run: |
+        curl -LR -o SukkaW/1.txt "https://ruleset.skk.moe/List/domainset/reject_phishing.conf"
+        curl -LR -o SukkaW/2.txt "https://ruleset.skk.moe/List/domainset/reject.conf"
+        
+    - name: Merge lists and remove duplicates
+      run: |
+        awk 'FNR==1{print ""}{print}' SukkaW/*.txt > SukkaW/SukkaW_merge.txt
+        awk '!seen[$0]++' SukkaW/SukkaW_merge.txt > SukkaW/SukkaW_Adblock_For_Clash.yaml
+        sed -i '/#/d' SukkaW/SukkaW_Adblock_For_Clash.yaml
+        sed -i '/^\s*$/d' SukkaW/SukkaW_Adblock_For_Clash.yaml
+        sed -i "s/^/  - '+&/g" SukkaW/SukkaW_Adblock_For_Clash.yaml
+        sed -i "s/$/&'/g" SukkaW/SukkaW_Adblock_For_Clash.yaml
+        sed -i '1i payload:' SukkaW/SukkaW_Adblock_For_Clash.yaml
+
+    - name: Push artifacts to SukkaW_Adblock branch
+      run: |
+        git config --local user.email "523537295@qq.com"
+        git config --local user.name "FaNGbABa"
+        git fetch
+        git checkout SukkaW_Adblock
+        git checkout --orphan SukkaW_Adblock-orphan
+        git rm -rf .
+        cp -rf SukkaW/SukkaW_Adblock_For_Clash.yaml ./
+        git add SukkaW_Adblock_For_Clash.yaml
+        git commit -am "Updated at $(date)"
+        git branch -D SukkaW_Adblock
+        git branch -m SukkaW_Adblock
+
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: SukkaW_Adblock
+        force: true
