@@ -41,6 +41,8 @@ jobs:
         sed -i 's/REJECT//g' ceshi/1.txt
         sed -i 's/[[:space:]]//g' ceshi/1.txt
         sed -i 's/HOST/DOMAIN/g' ceshi/1.txt
+        sed -i 's/suffix/SUFFIX/g' ceshi/1.txt
+        sed -i 's/keyword/KEYWORD/g' ceshi/1.txt
         sed -i 's/host/DOMAIN/g' ceshi/1.txt
         sed -i 's/ip-cidr/IP-CIDR/g' ceshi/1.txt
         sed -i '/IP6-CIDR/d' ceshi/1.txt
