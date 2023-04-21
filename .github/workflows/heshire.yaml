@@ -35,8 +35,8 @@ jobs:
 
     - name: Obtain AD lists
       run: |
-        curl -LR -o ceshi/1.txt "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list"
         curl -LR -o ceshi/8.txt "https://cdn.jsdelivr.net/gh/FaNGbABa/xiaobaishihundan@main/RuleSet/AdReject/Ad_Normal.yaml"
+        curl -LR -o ceshi/1.txt "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list"
         sed -i 's/reject//g' ceshi/1.txt
         sed -i 's/[[:space:]]//g' ceshi/1.txt
         sed -i 's/HOST/DOMAIN/g' ceshi/1.txt
