@@ -43,7 +43,6 @@ jobs:
         sed -i 's/host/DOMAIN/g' ceshi/1.txt
         sed -i 's/.$//' ceshi/1.txt
         sed -i "s/^/  - &/g" ceshi/1.txt
-        sed -i '1d' ceshi/1.txt
         sed -i '/payload/d' ceshi/8.txt
         
     - name: Merge lists and remove duplicates
@@ -51,6 +50,7 @@ jobs:
         awk 'FNR==1{print ""}{print}' ceshi/*.txt > ceshi/02merge.txt
         awk '!seen[$0]++' ceshi/02merge.txt > ceshi/ceshi.yaml
         sed -i '/#/d' ceshi/ceshi.yaml
+        sed -i '1d' ceshi/ceshi.yaml
         sed -i '1i payload:' ceshi/ceshi.yaml
 
     - name: Push artifacts to woshiyishi branch
