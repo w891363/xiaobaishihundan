@@ -1,131 +1,86 @@
 name: Update AntiAd Rules
 
 on:
-
   push:
-
     branches: [ main ]
-
   workflow_dispatch:
-
   schedule: 
-
     - cron:  '0 2 */3 * *'
 
 jobs:
-
   build:
-
     name: Generate AntiAd Rules
-
     runs-on: ubuntu-latest
-
     steps:
-
+    
     - name: Set up Go 1.x
-
       uses: actions/setup-go@v2
-
       with:
-
         go-version: ^1.14
-
       id: go
 
-      
-
     - name: Check out code into the Go module directory
-
       uses: actions/checkout@v2
 
     - name: Get dependencies
-
       run: |
-
         go get -v -t -d ./...
-
         if [ -f Gopkg.toml ]; then
-
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-
             dep ensure
-
         fi
 
     - name: Create AntiAd folder
-
       run: mkdir -p AntiAd
 
     - name: Obtain AD lists
-
       run: |
-
         curl -LR -o AntiAd/1.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyList.yaml"
-
         curl -LR -o AntiAd/2.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
-
         curl -LR -o AntiAd/3.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyPrivacy.yaml"
-
         curl -LR -o AntiAd/4.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
-
         curl -LR -o AntiAd/5.txt "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
-
         curl -LR -o AntiAd/6.txt "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml"
-
         curl -LR -o AntiAd/7.txt "https://cdn.jsdelivr.net/gh/zqzess/rule_for_quantumultX@master/Clash/filter/AdBlock.list"
-
         curl -LR -o AntiAd/8.txt "https://cdn.jsdelivr.net/gh/FaNGbABa/xiaobaishihundan@main/RuleSet/AdReject/Ad_Normal.yaml"
-
-        
+        curl -LR -o AntiAd/9.txt "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list"
+        sed -i 's/reject//g' AntiAd/9.txt
+        sed -i 's/REJECT//g' AntiAd/9.txt
+        sed -i 's/[[:space:]]//g' AntiAd/9.txt
+        sed -i 's/HOST/DOMAIN/g' AntiAd/9.txt
+        sed -i 's/suffix/SUFFIX/g' AntiAd/9.txt
+        sed -i 's/keyword/KEYWORD/g' AntiAd/9.txt
+        sed -i 's/host/DOMAIN/g' AntiAd/9.txt
+        sed -i 's/ip-cidr/IP-CIDR/g' AntiAd/9.txt
+        sed -i '/IP6-CIDR/d' AntiAd/9.txt
+        sed -i '/USER-AGENT/d' AntiAd/9.txt
+        sed -i 's/.$//' AntiAd/9.txt
+        sed -i "s/^/  - &/g" AntiAd/9.txt
 
     - name: Merge lists and remove duplicates
-
       run: |
-
         awk 'FNR==1{print ""}{print}' AntiAd/*.txt > AntiAd/01merge.txt
-
         awk '!seen[$0]++' AntiAd/01merge.txt > AntiAd/Adblock.yaml
-
         sed -i '1d' AntiAd/Adblock.yaml
-
         sed -i '/#/d' AntiAd/Adblock.yaml
 
-        
-
     - name: Push artifacts to adblock branch
-
       run: |
-
         git config --local user.email "523537295@qq.com"
-
         git config --local user.name "FaNGbABa"
-
         git fetch
-
         git checkout adblock
-
         git checkout --orphan adblock-orphan
-
         git rm -rf .
-
         cp -rf AntiAd/Adblock.yaml ./
-
         git add Adblock.yaml
-
         git commit -am "Updated at $(date)"
-
         git branch -D adblock
-
         git branch -m adblock
 
     - name: GitHub Push
-
       uses: ad-m/github-push-action@v0.6.0
-
       with:
-
         github_token: ${{ secrets.GITHUB_TOKEN }}
-
         branch: adblock
-
         force: true
