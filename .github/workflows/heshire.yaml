@@ -42,6 +42,7 @@ jobs:
         sed -i 's/HOST/DOMAIN/g' ceshi/1.txt
         sed -i 's/host/DOMAIN/g' ceshi/1.txt
         sed -i 's/.$//' ceshi/1.txt
+        sed -i "s/^/  - &/g" ceshi/1.txt
         
     - name: Merge lists and remove duplicates
       run: |
