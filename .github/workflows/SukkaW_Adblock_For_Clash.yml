@@ -44,7 +44,8 @@ jobs:
         awk '!seen[$0]++' SukkaW/SukkaW_merge.txt > SukkaW/SukkaW_Adblock_For_Clash.yaml
         sed -i '/#/d' SukkaW/SukkaW_Adblock_For_Clash.yaml
         sed -i '/^\s*$/d' SukkaW/SukkaW_Adblock_For_Clash.yaml
-        sed -i "s/^/  - '+&/g" SukkaW/SukkaW_Adblock_For_Clash.yaml
+        sed -i 's/^\.//' SukkaW/SukkaW_Adblock_For_Clash.yaml
+        sed -i "s/^/  - '+.&/g" SukkaW/SukkaW_Adblock_For_Clash.yaml
         sed -i "s/$/&'/g" SukkaW/SukkaW_Adblock_For_Clash.yaml
         sed -i '1i payload:' SukkaW/SukkaW_Adblock_For_Clash.yaml
 
