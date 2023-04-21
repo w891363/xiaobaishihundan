@@ -54,6 +54,7 @@ jobs:
         sed -i 's/ip-cidr/IP-CIDR/g' AntiAd/9.txt
         sed -i '/IP6-CIDR/d' AntiAd/9.txt
         sed -i '/USER-AGENT/d' AntiAd/9.txt
+        sed -i '1d' AntiAd/9.txt
         sed -i 's/.$//' AntiAd/9.txt
         sed -i "s/^/  - &/g" AntiAd/9.txt
 
