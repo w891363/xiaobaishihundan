@@ -50,23 +50,23 @@ jobs:
         sed -i "s/$/&'/g" SukkaW/SukkaW_Adblock_For_Clash.yaml
         sed -i '1i payload:' SukkaW/SukkaW_Adblock_For_Clash.yaml
 
-    - name: Push artifacts to release branch
+    - name: Push artifacts to SukkaW_Adblock branch
       run: |
         git config --local user.email "523537295@qq.com"
         git config --local user.name "FaNGbABa"
         git fetch
-        git checkout release
-        git checkout --orphan release-orphan
-        git rm -rf SukkaW_Adblock_For_Clash.yaml ./
+        git checkout SukkaW_Adblock
+        git checkout --orphan SukkaW_Adblock-orphan
+        git rm -rf .
         cp -rf SukkaW/SukkaW_Adblock_For_Clash.yaml ./
         git add SukkaW_Adblock_For_Clash.yaml
         git commit -am "Updated at $(date)"
-        git branch -D release
-        git branch -m release
+        git branch -D SukkaW_Adblock
+        git branch -m SukkaW_Adblock
 
     - name: GitHub Push
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: release
+        branch: SukkaW_Adblock
         force: true
