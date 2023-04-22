@@ -1,4 +1,4 @@
-name: Update China IP list
+name: Update SukkaW's Reject Rules and anti-AD 
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: Generate GeoIP2 list
+    name: Merge SukkaW's Reject Rules and anti-AD 
     runs-on: ubuntu-latest
     steps:
 
