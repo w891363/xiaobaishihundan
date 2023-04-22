@@ -1,0 +1,68 @@
+name: Update China IP list
+
+on:
+  push:
+    branches: [ main ]
+  
+  workflow_dispatch:
+
+  schedule: 
+    - cron:  '0 2 */3 * *'
+
+jobs:
+  build:
+    name: Generate GeoIP2 list
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Set up Go 1.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: ^1.14
+      id: go
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+
+    - name: Get dependencies
+      run: |
+        go get -v -t -d ./...
+        if [ -f Gopkg.toml ]; then
+            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+            dep ensure
+        fi
+    - name: Create adblock folder
+      run: mkdir -p adblock
+
+    - name: Obtain CN IP lists
+      run: |
+        curl -LR -o adblock/SukkaW_Adblock_For_Clash.txt "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/SukkaW_Adblock/SukkaW_Adblock_For_Clash.yaml"
+        curl -LR -o adblock/anti-ad-clash.txt "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml"
+  
+    - name: Merge and IP lists and remove duplicates
+      run: |
+        awk 'FNR==1{print ""}{print}' adblock/*.txt > adblock/merge.txt
+        awk '!seen[$0]++' adblock/merge.txt > adblock/anti-Ad.yaml
+        sed -i '1d' adblock/anti-Ad.yaml
+        sed -i '/#/d' adblock/anti-Ad.yaml
+
+    - name: Push artifacts to SukkaW_Adblock branch
+      run: |
+        git config --local user.email "523537295@qq.com"
+        git config --local user.name "FaNGbABa"
+        git fetch
+        git checkout SukkaW_Adblock
+        git checkout --orphan SukkaW_Adblock-orphan
+        git rm -rf .
+        cp -rf SukkaW/anti-Ad.yaml ./
+        git add anti-Ad.yaml
+        git commit -am "Updated at $(date)"
+        git branch -D SukkaW_Adblock
+        git branch -m SukkaW_Adblock
+            
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: release
+        force: true
