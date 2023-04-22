@@ -54,7 +54,7 @@ jobs:
         git checkout SukkaW_Adblock
         git checkout --orphan SukkaW_Adblock-orphan
         git rm -rf .
-        cp -rf SukkaW/anti-Ad.yaml ./
+        cp -rf adblock/anti-Ad.yaml ./
         git add anti-Ad.yaml
         git commit -am "Updated at $(date)"
         git branch -D SukkaW_Adblock
