@@ -1,8 +1,8 @@
 payload:
   # 放行规则
-  - DOMAIN-SUFFIX,ap6.ssl.msdk.qq.com
-  - DOMAIN-SUFFIX,acs.m.taobao.com
-  - DOMAIN-SUFFIX,static.122.gov.cn
+  - DOMAIN,ap6.ssl.msdk.qq.com
+  - DOMAIN,acs.m.taobao.com
+  - DOMAIN,static.122.gov.cn
   - DOMAIN-SUFFIX,flurry.com
   - DOMAIN-SUFFIX,bugsnag.com
   # > Google
