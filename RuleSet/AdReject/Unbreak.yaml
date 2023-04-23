@@ -1,7 +1,5 @@
 payload:
   # 放行规则
-
-
   - DOMAIN-SUFFIX,ap6.ssl.msdk.qq.com
   - DOMAIN-SUFFIX,acs.m.taobao.com
   - DOMAIN-SUFFIX,static.122.gov.cn
