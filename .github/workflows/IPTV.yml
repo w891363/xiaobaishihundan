@@ -36,8 +36,16 @@ jobs:
 
     - name: Obtain IPTV list
       run: |
+        curl -LR -o iptv/sxg.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/sxg.m3u"
+        curl -LR -o iptv/ghyx.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/ghyx.m3u"
+        curl -LR -o iptv/dhb.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/dhb.m3u"
         curl -LR -o iptv/iptv.m3u "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u"
-        curl -LR -o iptv/yu.m3u "https://raw.githubusercontent.com/YanG-1989/m3u/main/yu.m3u"
+        curl -LR -o iptv/YueChan.m3u "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u"
+        sed -i 's/group-title="央视"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
+        sed -i 's/group-title="国际"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
+        sed -i 's/group-title="卫视"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
+        sed -i 's/group-title="地方"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
+        sed -i 's/group-title="数字"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
   
     - name: Merge and IP lists and remove duplicates
       run: |
