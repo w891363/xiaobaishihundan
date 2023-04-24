@@ -39,15 +39,44 @@ jobs:
         curl -LR -o iptv/sxg.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/sxg.m3u"
         curl -LR -o iptv/ghyx.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/ghyx.m3u"
         curl -LR -o iptv/dhb.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/dhb.m3u"
-        curl -LR -o iptv/iptv.m3u "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u"
+        curl -LR -o iptv/iptv.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/maiduidui.m3u"
         curl -LR -o iptv/YueChan.m3u "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u"
+        curl -LR -o iptv/feiyangsxg.m3u "https://telegram-feiyangdigital.v1.mk/sxg.m3u"
+        curl -LR -o iptv/fanmingming.m3u "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
+        sed -i 's/group-title="央视"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="香港"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="国际"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="卫视"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="教育"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="UHD"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="北京"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="浙江"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="上海"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="江西"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="四川"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="海南"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="湖南"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="河南"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="辽宁"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="内蒙"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="江苏"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="新华社"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="华数"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="移动"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="4K频道"/group-title="肥羊-蜀小果IPv6"/g' iptv/feiyangsxg.m3u
+        sed -i 's/group-title="央视"/group-title="肥羊-蜀小果IPv6"/g' iptv/feiyangsxg.m3u
+        sed -i 's/group-title="其他"/group-title="肥羊-蜀小果IPv6"/g' iptv/feiyangsxg.m3u
+        sed -i 's/group-title="香港"/group-title="肥羊-蜀小果IPv6"/g' iptv/feiyangsxg.m3u
+        sed -i 's/group-title="卫视"/group-title="肥羊-蜀小果IPv6"/g' iptv/feiyangsxg.m3u
+        sed -i 's/group-title="江苏"/group-title="肥羊-蜀小果IPv6"/g' iptv/feiyangsxg.m3u
+        sed -i 's/group-title="四川"/group-title="肥羊-蜀小果IPv6"/g' iptv/feiyangsxg.m3u
         sed -i 's/group-title="央视"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
         sed -i 's/group-title="国际"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
         sed -i 's/group-title="卫视"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
         sed -i 's/group-title="地方"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
         sed -i 's/group-title="数字"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
   
-    - name: Merge and IP lists and remove duplicates
+    - name: Merge and IPTV lists and remove duplicates
       run: |
         awk 'FNR==1{print ""}{print}' iptv/*.m3u > iptv/merge.m3u
         awk '!seen[$0]++' iptv/merge.m3u > iptv/IPTV.m3u
