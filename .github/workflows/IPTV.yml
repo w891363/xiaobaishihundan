@@ -1,0 +1,66 @@
+name: Update IPTV
+
+on:
+  push:
+    branches: [ main ]
+  
+  workflow_dispatch:
+
+  schedule: 
+    - cron:  '0 19 * * *'
+
+jobs:
+  build:
+    name: Generate IPTV
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Set up Go 1.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: ^1.14
+      id: go
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+
+    - name: Get dependencies
+      run: |
+        go get -v -t -d ./...
+        if [ -f Gopkg.toml ]; then
+            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+            dep ensure
+        fi
+    - name: Create iptv folder
+      run: mkdir -p iptv
+
+    - name: Obtain IPTV list
+      run: |
+        curl -LR -o iptv/iptv.m3u "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u"
+        curl -LR -o iptv/yu.m3u "https://raw.githubusercontent.com/YanG-1989/m3u/main/yu.m3u"
+  
+    - name: Merge and IP lists and remove duplicates
+      run: |
+        awk 'FNR==1{print ""}{print}' iptv/*.m3u > iptv/merge.m3u
+        awk '!seen[$0]++' iptv/merge.m3u > iptv/IPTV.m3u
+
+    - name: Push artifacts to IPTV branch
+      run: |
+        git config --local user.email "523537295@qq.com"
+        git config --local user.name "FaNGbABa"
+        git fetch
+        git checkout IPTV
+        git checkout --orphan IPTV-orphan
+        git rm -rf .
+        cp -rf iptv/IPTV.m3u ./
+        git add IPTV.m3u
+        git commit -am "Updated at $(date)"
+        git branch -D IPTV
+        git branch -m IPTV
+            
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: IPTV
+        force: true
