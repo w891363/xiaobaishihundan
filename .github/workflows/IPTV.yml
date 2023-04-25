@@ -37,6 +37,7 @@ jobs:
     - name: Obtain IPTV list
       run: |
         curl -LR -o iptv/sxg.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/sxg.m3u"
+        curl -LR -o iptv/cqyx.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/cqyx.m3u"
         curl -LR -o iptv/ghyx.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/ghyx.m3u"
         curl -LR -o iptv/dhb.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/dhb.m3u"
         curl -LR -o iptv/iptv.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/maiduidui.m3u"
