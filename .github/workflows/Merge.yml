@@ -46,23 +46,23 @@ jobs:
         sed -i '1d' adblock/anti-Ad.yaml
         sed -i '/#/d' adblock/anti-Ad.yaml
 
-    - name: Push artifacts to SukkaW_Adblock branch
+    - name: Push artifacts to antiAd branch
       run: |
         git config --local user.email "523537295@qq.com"
         git config --local user.name "FaNGbABa"
         git fetch
-        git checkout SukkaW_Adblock
-        git checkout --orphan SukkaW_Adblock-orphan
+        git checkout antiAd
+        git checkout --orphan antiAd-orphan
         git rm -rf .
         cp -rf adblock/anti-Ad.yaml ./
         git add anti-Ad.yaml
         git commit -am "Updated at $(date)"
-        git branch -D SukkaW_Adblock
-        git branch -m SukkaW_Adblock
+        git branch -D antiAd
+        git branch -m antiAd
             
     - name: GitHub Push
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: SukkaW_Adblock
+        branch: antiAd
         force: true
