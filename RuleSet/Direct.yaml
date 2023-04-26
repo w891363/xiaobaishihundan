@@ -1,9 +1,9 @@
 payload:
   # >> My List
-  - DOMAIN-SUFFIX,chsi.com.cn
-  - DOMAIN-SUFFIX,edu.cn
+  - DOMAIN-SUFFIX,cn
   - DOMAIN-SUFFIX,unionpay.com
   - DOMAIN-SUFFIX,ikandy.fun
+  - DOMAIN-SUFFIX,wxsy.net
 
   # >> BiliBili
   - DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com
