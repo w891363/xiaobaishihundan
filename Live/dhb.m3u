@@ -13,6 +13,32 @@ http://139.99.40.48:35455/huya/569528
 http://139.99.40.48:35455/huya/949527
 #EXTINF:-1 tvg-id="" tvg-name="【虎牙】霸哥", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】霸哥
 http://139.99.40.48:35455/huya/189201
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】熙原原子", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】熙原原子
+http://139.99.40.48:35455/huya/10268
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】豚豚大魔王", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】豚豚大魔王
+http://139.99.40.48:35455/huya/2808
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】沫子", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】沫子
+http://139.99.40.48:35455/huya/696969
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】张大仙", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】张大仙
+http://139.99.40.48:35455/huya/688
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】吕德华", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】吕德华
+http://139.99.40.48:35455/huya/243547
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】AzZ丶口袋", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】AzZ丶口袋
+http://139.99.40.48:35455/huya/51106
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】微凉", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】微凉
+http://139.99.40.48:35455/huya/591756
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】KING-小金快跑", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】KING-小金快跑
+http://139.99.40.48:35455/huya/347545
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】张老三", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】张老三
+http://139.99.40.48:35455/huya/52333
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】经典频道", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】经典频道
+http://139.99.40.48:35455/huya/19743448
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】红海行动", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】红海行动
+http://139.99.40.48:35455/huya/19743449
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】战狼", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】战狼
+http://139.99.40.48:35455/huya/19743447
+#EXTINF:-1 tvg-id="" tvg-name="【虎牙】地雷战", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】地雷战
+http://139.99.40.48:35455/huya/27175304
 #EXTINF:-1 tvg-id="" tvg-name="【虎牙】倚天屠龙记", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】倚天屠龙记
 http://139.99.40.48:35455/huya/11342403
 #EXTINF:-1 tvg-id="" tvg-name="【虎牙】周星驰粤语版", group-title="斗鱼虎牙哔哩哔哩", 【虎牙】周星驰粤语版
@@ -81,3 +107,15 @@ http://139.99.40.48:35455/douyu/5189167
 http://139.99.40.48:35455/douyu/92000
 #EXTINF:-1 tvg-id="" tvg-name="【斗鱼】一条小团团OvO", group-title="斗鱼虎牙哔哩哔哩", 【斗鱼】一条小团团OvO
 http://139.99.40.48:35455/douyu/2222
+#EXTINF:-1 tvg-id="" tvg-name="【哔哩哔哩】树里酱Juri" tvg-logo="" group-title="斗鱼虎牙哔哩哔哩", 【哔哩哔哩】树里酱Juri
+https://epg.112114.xyz/bili/3064286
+#EXTINF:-1 tvg-id="" tvg-name="【哔哩哔哩】管珩心" tvg-logo="" group-title="斗鱼虎牙哔哩哔哩", 【哔哩哔哩】管珩心
+https://epg.112114.xyz/bili/2516117
+#EXTINF:-1 tvg-id="" tvg-name="【哔哩哔哩】吃皮不吐泡泡" tvg-logo="" group-title="斗鱼虎牙哔哩哔哩", 【哔哩哔哩】吃皮不吐泡泡
+https://epg.112114.xyz/bili/27446866
+#EXTINF:-1 tvg-id="" tvg-name="【哔哩哔哩】小海锤石" tvg-logo="" group-title="斗鱼虎牙哔哩哔哩", 【哔哩哔哩】小海锤石
+https://epg.112114.xyz/bili/22909081
+#EXTINF:-1 tvg-id="" tvg-name="【哔哩哔哩】Uzi" tvg-logo="" group-title="斗鱼虎牙哔哩哔哩", 【哔哩哔哩】Uzi
+https://epg.112114.xyz/bili/555
+#EXTINF:-1 tvg-id="" tvg-name="【哔哩哔哩】有只乖乖" tvg-logo="" group-title="斗鱼虎牙哔哩哔哩", 【哔哩哔哩】有只乖乖
+https://epg.112114.xyz/bili/27403758
