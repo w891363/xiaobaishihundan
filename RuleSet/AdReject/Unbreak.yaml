@@ -5,6 +5,7 @@ payload:
   - DOMAIN,static.122.gov.cn
   - DOMAIN-SUFFIX,flurry.com
   - DOMAIN-SUFFIX,bugsnag.com
+  - DOMAIN-SUFFIX,store.heytapimage.com
   # > Google
   - DOMAIN-SUFFIX,blog.google
   - DOMAIN-SUFFIX,googletraveladservices.com
