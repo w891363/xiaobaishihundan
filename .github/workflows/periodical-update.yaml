@@ -59,7 +59,6 @@ jobs:
         curl -LR -o dist/CN-ip-cidr.txt "https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/CN-ip-cidr.txt"
         curl -LR -o dist/mayaxcn_chnroute.txt "https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt"
         curl -LR -o dist/misakaio_chnroutes.txt "https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt"
-        curl -LR -o dist/missuo_chnroute.txt "https://raw.githubusercontent.com/missuo/ASN-China/main/IP.China.list"
         curl -LR -o dist/othernet.txt "https://ispip.clang.cn/othernet.txt"
         curl -LR -o dist/othernet_ipv6.txt "https://ispip.clang.cn/othernet_ipv6.txt"
         curl -LR -o dist/tmplink_chnroute.txt "https://raw.githubusercontent.com/tmplink/IPDB/main/ipv4/cidr/CN.txt"
