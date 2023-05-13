@@ -9,10 +9,15 @@ payload:
   - DOMAIN-SUFFIX,adservice.sigmob.cn
   - DOMAIN-SUFFIX,adtrack.e.kuaishou.com
   - DOMAIN-SUFFIX,adukwai.com
+  - DOMAIN-SUFFIX,adx-cn.anythinktech.com
   - DOMAIN-SUFFIX,adx-drcn.op.dbankcloud.cn
   - DOMAIN-SUFFIX,adx-track.domob.cn
   - DOMAIN-SUFFIX,adx.hubcloud.com.cn
   - DOMAIN-SUFFIX,ali-ad.a.yximgs.com
+  - DOMAIN-SUFFIX,android.bugly.qq.com
+  - DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao-b.com
+  - DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao.com
+  - DOMAIN-SUFFIX,api.anythinktech.com
   - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,appcenter.ms
   - DOMAIN-SUFFIX,b-gtc.gepush.com
@@ -23,17 +28,22 @@ payload:
   - DOMAIN-SUFFIX,crashlytics.com
   - DOMAIN-SUFFIX,d.kugou.com
   - DOMAIN-SUFFIX,da.netease.com
+  - DOMAIN-SUFFIX,datk.anythinktech.com
   - DOMAIN-SUFFIX,dc.sigmob.cn
   - DOMAIN-SUFFIX,dm.pstatp.com
+  - DOMAIN-SUFFIX,dsp-x.jd.com
   - DOMAIN-SUFFIX,e.qq.com
   - DOMAIN-SUFFIX,errlog.umeng.com
   - DOMAIN-SUFFIX,firebase.io
+  - DOMAIN-SUFFIX,g1.163.com
   - DOMAIN-SUFFIX,gdt.qq.com
   - DOMAIN-SUFFIX,google-analytics.com
   - DOMAIN-SUFFIX,google.cn
   - DOMAIN-SUFFIX,googleads.g.doubleclick.net
+  - DOMAIN-SUFFIX,gorgon.youdao.com
   - DOMAIN-SUFFIX,hm.baidu.com
   - DOMAIN-SUFFIX,httpdns.bcelive.com
+  - DOMAIN-SUFFIX,hubble.netease.com
   - DOMAIN-SUFFIX,iadmat.nosdn.127.net
   - DOMAIN-SUFFIX,iadmusicmat.music.126.net
   - DOMAIN-SUFFIX,iadmusicmatvideo.music.126.net
@@ -43,6 +53,7 @@ payload:
   - DOMAIN-SUFFIX,js-ad.a.yximgs.com
   - DOMAIN-SUFFIX,log-alibaba-taobao-douyin.cdn.bcebos.com
   - DOMAIN-SUFFIX,mam.netease.com
+  - DOMAIN-SUFFIX,mi.gdt.qq.com
   - DOMAIN-SUFFIX,mo.res.wpscdn.cn
   - DOMAIN-SUFFIX,msg.mobile.kugou.com
   - DOMAIN-SUFFIX,nex.163.com
@@ -59,6 +70,7 @@ payload:
   - DOMAIN-SUFFIX,sdk-open-phone.getui.com
   - DOMAIN-SUFFIX,sdk.alibaba.com.ailbaba.me
   - DOMAIN-SUFFIX,sdk.beizi.biz
+  - DOMAIN-SUFFIX,sdk.e.qq.com
   - DOMAIN-SUFFIX,sdktmp.hubcloud.com.cn
   - DOMAIN-SUFFIX,sf3-fe-tos.pglstatp-toutiao.com
   - DOMAIN-SUFFIX,stg-data.ads.heytapmobi.com
@@ -71,5 +83,6 @@ payload:
   - DOMAIN-SUFFIX,ulogs.umengcloud.com
   - DOMAIN-SUFFIX,umeng.com.gds.alibabadns.com
   - DOMAIN-SUFFIX,wcp.taobao.com
+  - DOMAIN-SUFFIX,xlog.jd.com
   - DOMAIN-SUFFIX,zhanzhang.toutiao.com
   - DOMAIN-SUFFIX,zz.bdstatic.com
