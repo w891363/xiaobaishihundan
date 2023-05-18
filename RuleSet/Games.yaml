@@ -46,3 +46,13 @@ payload:
   - IP-CIDR,18.194.67.83/32,no-resolve 
   - IP-CIDR,54.150.52.31/32,no-resolve 
   - IP-CIDR,54.180.64.186/32,no-resolve
+  
+  # 原神
+  - DOMAIN-SUFFIX,genshinimpact.com
+  - DOMAIN-SUFFIX,honkaiimpact3.com
+  - DOMAIN-SUFFIX,honkaistarrail.com
+  - DOMAIN-SUFFIX,hoyo.link
+  - DOMAIN-SUFFIX,hoyolab.com
+  - DOMAIN-SUFFIX,hoyoverse.com
+  - DOMAIN-SUFFIX,n0vadesktop.com
+  - PROCESS-NAME,com.miHoYo.GenshinImpact
