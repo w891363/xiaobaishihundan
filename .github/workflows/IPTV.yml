@@ -69,6 +69,7 @@ jobs:
         sed -i 's/group-title="安徽"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="山西"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="贵州"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="重庆"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="央视"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
         sed -i 's/group-title="国际"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
         sed -i 's/group-title="卫视"/group-title="YueChan-IPv6"/g' iptv/YueChan.m3u
