@@ -96,6 +96,7 @@ payload:
   - DOMAIN-SUFFIX,sdk.open.talk.getui.com
   - DOMAIN-SUFFIX,sdk.open.talk.getui.net
   - DOMAIN-SUFFIX,sdktmp.hubcloud.com.cn
+  - DOMAIN-SUFFIX,sentry.io
   - DOMAIN-SUFFIX,sf3-fe-tos.pglstatp-toutiao.com
   - DOMAIN-SUFFIX,sis.jpush.io
   - DOMAIN-SUFFIX,stg-data.ads.heytapmobi.com
