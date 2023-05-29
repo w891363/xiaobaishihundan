@@ -36,18 +36,21 @@ jobs:
 
     - name: Obtain CN IP lists
       run: |
-         curl -LR -o adblock/1HOSTS.txt "https://badmojr.gitlab.io/1hosts/Lite/wildcards.txt"
-         sed -i '/#/d' adblock/1HOSTS.txt
-         sed -i '1d' adblock/1HOSTS.txt
-         sed -i "s/*/  - '+/g" adblock/1HOSTS.txt
-         sed -i "s/$/&'/g" adblock/1HOSTS.txt
-         sed -i '1i payload:' adblock/1HOSTS.txt
-         
+        curl -LR -o adblock/SukkaW_Adblock_For_Clash.txt "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/SukkaW_Adblock/SukkaW_Adblock_For_Clash.yaml"
+        curl -LR -o adblock/anti-ad-clash.txt "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml"
+        curl -LR -o adblock/1HOSTS.txt "https://badmojr.gitlab.io/1hosts/Lite/wildcards.txt"
+        sed -i '/#/d' adblock/1HOSTS.txt
+        sed -i '1d' adblock/1HOSTS.txt
+        sed -i "s/*/  - '+/g" adblock/1HOSTS.txt
+        sed -i "s/$/&'/g" adblock/1HOSTS.txt
+        sed -i '1i payload:' adblock/1HOSTS.txt
+  
     - name: Merge and IP lists and remove duplicates
       run: |
         awk 'FNR==1{print ""}{print}' adblock/*.txt > adblock/merge.txt
         awk '!seen[$0]++' adblock/merge.txt > adblock/anti-Ad.yaml
         sed -i '1d' adblock/anti-Ad.yaml
+        sed -i '/#/d' adblock/anti-Ad.yaml
 
     - name: Push artifacts to antiAd branch
       run: |
