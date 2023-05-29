@@ -38,6 +38,7 @@ jobs:
       run: |
          curl -LR -o adblock/1HOSTS.txt "https://badmojr.gitlab.io/1hosts/Lite/wildcards.txt"
          sed -i '/#/d' adblock/1HOSTS.txt
+         sed -i '1d' adblock/1HOSTS.txt
          sed -i "s/*/  - '+/g" adblock/1HOSTS.txt
          sed -i "s/$/&'/g" adblock/1HOSTS.txt
          sed -i '1i payload:' adblock/1HOSTS.txt
