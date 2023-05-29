@@ -37,13 +37,13 @@ jobs:
     - name: Obtain CN IP lists
       run: |
          curl -LR -o adblock/1HOSTS.txt "https://badmojr.gitlab.io/1hosts/Lite/wildcards.txt"
-  
+         sed -i '/#/d' adblock/1HOSTS.txt
+         sed -i "s/*/  - '+/g" adblock/1HOSTS.txt
+         
     - name: Merge and IP lists and remove duplicates
       run: |
         awk 'FNR==1{print ""}{print}' adblock/*.txt > adblock/merge.txt
         awk '!seen[$0]++' adblock/merge.txt > adblock/anti-Ad.yaml
-        sed -i '/#/d' adblock/1HOSTS.txt
-        sed -i 's/*/  - '+/g' adblock/1HOSTS.txt
 
     - name: Push artifacts to antiAd branch
       run: |
