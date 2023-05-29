@@ -47,6 +47,7 @@ jobs:
       run: |
         awk 'FNR==1{print ""}{print}' adblock/*.txt > adblock/merge.txt
         awk '!seen[$0]++' adblock/merge.txt > adblock/anti-Ad.yaml
+        sed -i '1d' adblock/anti-Ad.yaml
 
     - name: Push artifacts to antiAd branch
       run: |
