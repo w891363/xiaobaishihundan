@@ -72,7 +72,7 @@ jobs:
         awk '!seen[$0]++' dist/merge.txt > dist/Geo_ASN_China_All.yaml
         sed -i '1d' dist/Geo_ASN_China_All.yaml
         sed -i '/#/d' dist/Geo_ASN_China_All.yaml
-        sed -i 's/::ffff://' dist/Geo_ASN_China_All.yaml | sed '/:/ s/\([0-9a-fA-F]\+\):/\1\.\2\./g' | awk '{printf "%010s %s\n", $1, $0}' | sort | sed 's/^[0]*//' | cut -d ' ' -f 2-
+        cat dist/Geo_ASN_China_All.yaml | sed -e 's/\.\([0-9]\)/.0\1/g' | sort -V | sed -e 's/\.0*//g'
         sed -i "s/^/  - '&/g" dist/Geo_ASN_China_All.yaml
         sed -i "s/$/&'/g" dist/Geo_ASN_China_All.yaml
         sed -i '1i payload:' dist/Geo_ASN_China_All.yaml
