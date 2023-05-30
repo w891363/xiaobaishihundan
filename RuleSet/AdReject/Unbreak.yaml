@@ -46,3 +46,6 @@ payload:
   - DOMAIN,alt6-mtalk.google.com
   - DOMAIN,alt7-mtalk.google.com
   - DOMAIN,alt8-mtalk.google.com
+
+  # >> 修正由于UnblockNeteasemusic而导致到酷狗音乐无法正常播放
+  - PROCESS-NAME,com.kugou.android.lite
