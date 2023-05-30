@@ -37,8 +37,6 @@ jobs:
     - name: Obtain IPTV list
       run: |
         curl -LR -o iptv/sxg.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/sxg.m3u"
-        curl -LR -o iptv/cqyx.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/cqyx.m3u"
-        curl -LR -o iptv/ghyx.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/ghyx.m3u"
         curl -LR -o iptv/huya.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/huya.m3u"
         curl -LR -o iptv/douyu.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/douyu.m3u"
         curl -LR -o iptv/bilibili.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/bilibili.m3u"
@@ -46,6 +44,7 @@ jobs:
         curl -LR -o iptv/YueChan.m3u "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u"
         curl -LR -o iptv/fanmingming.m3u "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
         curl -LR -o iptv/hklive.m3u "https://hkanime.live/raw.m3u"
+        sed -i '1d' iptv/hklive.m3u
         sed -i 's/group-title="[RTHK] 香港電台"/group-title="HKLive"/g' iptv/hklive.m3u
         sed -i 's/group-title="[Fan] 奇妙電視"/group-title="HKLive"/g' iptv/hklive.m3u
         sed -i 's/group-title="[TVB] 電視廣播"/group-title="HKLive"/g' iptv/hklive.m3u
@@ -53,7 +52,7 @@ jobs:
         sed -i '1d' iptv/fanmingming.m3u
         sed -i 's/group-title="央视频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="港澳频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
-        sed -i 's/group-title="国际"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="香港频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="卫视频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="教育频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="超清频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
@@ -69,8 +68,8 @@ jobs:
         sed -i 's/group-title="内蒙频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="江苏频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="新华社"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
-        sed -i 's/group-title="华数频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
-        sed -i 's/group-title="移动"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="华数系列"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
+        sed -i 's/group-title="NewTV系列"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="安徽频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="山西频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="贵州频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
