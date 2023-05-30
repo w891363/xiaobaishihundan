@@ -72,7 +72,8 @@ jobs:
         awk '!seen[$0]++' dist/merge.txt > dist/Geo_ASN_China_All.yaml
         sed -i '1d' dist/Geo_ASN_China_All.yaml
         sed -i '/#/d' dist/Geo_ASN_China_All.yaml
-        sort -t: dist/Geo_ASN_China_All.yaml
+        grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" dist/Geo_ASN_China_All.yaml | sort
+        grep -E "([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}" dist/Geo_ASN_China_All.yaml | sort
         sed -i "s/^/  - '&/g" dist/Geo_ASN_China_All.yaml
         sed -i "s/$/&'/g" dist/Geo_ASN_China_All.yaml
         sed -i '1i payload:' dist/Geo_ASN_China_All.yaml
