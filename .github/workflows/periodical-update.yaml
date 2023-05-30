@@ -72,9 +72,9 @@ jobs:
         awk '!seen[$0]++' dist/merge.txt > dist/Geo_ASN_China_All.yaml
         sed -i '1d' dist/Geo_ASN_China_All.yaml
         sed -i '/#/d' dist/Geo_ASN_China_All.yaml
+        sort dist/Geo_ASN_China_All.yaml
         sed -i "s/^/  - '&/g" dist/Geo_ASN_China_All.yaml
         sed -i "s/$/&'/g" dist/Geo_ASN_China_All.yaml
-        sort dist/Geo_ASN_China_All.yaml
         sed -i '1i payload:' dist/Geo_ASN_China_All.yaml
 
     - name: Push artifacts to release branch
