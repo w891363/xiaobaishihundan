@@ -23,6 +23,7 @@ payload:
   # 放行规则
   - DOMAIN,ap6.ssl.msdk.qq.com
   - DOMAIN,acs.m.taobao.com
+  - DOMAIN-SUFFIX,jxdown.com
   - DOMAIN,static.122.gov.cn
   - DOMAIN-SUFFIX,flurry.com
   - DOMAIN-SUFFIX,bugsnag.com
