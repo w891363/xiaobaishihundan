@@ -1,8 +1,10 @@
 payload:
-  # VPS
-  - DOMAIN,cdn.xiaofeigun.ml
-  - DOMAIN,alist.xiaofeigun.tk
-  - IP-CIDR,139.99.40.48/32,no-resolve
+
+  # >> emby servers 
+  - DOMAIN,direct.nebula-emby.com
+  - DOMAIN,789.123456.al
+  - DOMAIN,ju.dog
+  - IP-CIDR,202.61.255.248/32,no-resolve 
   
    # OpenAI
   - DOMAIN-SUFFIX,openai.com
