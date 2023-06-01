@@ -6,6 +6,11 @@ payload:
   - DOMAIN-SUFFIX,ikandy.fun
   - DOMAIN-SUFFIX,wxsy.net
 
+  # VPS
+  - DOMAIN,cdn.xiaofeigun.ml
+  - DOMAIN,alist.xiaofeigun.tk
+  - IP-CIDR,139.99.40.48/32,no-resolve
+
   # >> 阿里云盘
   - PROCESS-NAME,com.alicloud.databox
   # >> 百度网盘
