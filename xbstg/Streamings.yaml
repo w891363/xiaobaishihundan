@@ -1,5 +1,5 @@
 payload:
-  # HBO Asia
+  # >> HBO Asia
   - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
   - DOMAIN,bcbolthboa-a.akamaihd.net
   - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net
@@ -40,7 +40,7 @@ payload:
   - PROCESS-NAME,hk.hbo.hbogo
   - PROCESS-NAME,sg.hbo.hbogo
   
-  # AmazonPrimeVideo
+  # >> AmazonPrimeVideo
   - DOMAIN,d1v5ir2lpwr8os.cloudfront.net
   - DOMAIN,d22qjgkvxw22r6.cloudfront.net
   - DOMAIN,d25xi40x97liuc.cloudfront.net
@@ -67,7 +67,7 @@ payload:
   - DOMAIN-KEYWORD,avoddashs
   - PROCESS-NAME,com.amazon.avod.thirdpartyclient
 
-  # NETFLIX
+  # >> NETFLIX
   - DOMAIN,e13252.dscg.akamaiedge.net
   - DOMAIN,h-netflix.online-metrix.net
   - DOMAIN,netflix.com.edgesuite.net
