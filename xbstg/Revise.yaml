@@ -1,5 +1,5 @@
 payload:
-  # LAN
+  # >> LAN
   - DOMAIN,localhost
   - DOMAIN-SUFFIX,local
   - IP-CIDR,0.0.0.0/8,no-resolve
@@ -20,7 +20,7 @@ payload:
   - IP-CIDR6,fc00::/7,no-resolve
   - IP-CIDR6,fe80::/10,no-resolve
   
-  # 放行规则
+  # >> 放行规则
   - DOMAIN,ap6.ssl.msdk.qq.com
   - DOMAIN,acs.m.taobao.com
   - DOMAIN,static.122.gov.cn
@@ -29,7 +29,7 @@ payload:
   - DOMAIN-SUFFIX,bugsnag.com
   - DOMAIN-SUFFIX,store.heytapimage.com
   
-  # > Google
+  # >> Google
   - DOMAIN-SUFFIX,blog.google
   - DOMAIN-SUFFIX,googletraveladservices.com
   - DOMAIN,clientservices.googleapis.com
