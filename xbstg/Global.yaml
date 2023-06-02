@@ -1720,12 +1720,30 @@ payload:
   - DOMAIN-SUFFIX,tx.me
   - DOMAIN-SUFFIX,usercontent.dev
 
-  # >> SG 
+  # >> TelegramIP SG 
   - IP-CIDR,91.108.16.0/22,no-resolve
   - IP-CIDR,91.108.56.0/23,no-resolve
   - IP-CIDR,149.154.168.0/22,no-resolve
   - IP-CIDR6,2001:b28:f23f::/48,no-resolve
 
+  # TelegramIP US
+  - IP-CIDR,91.108.12.0/22,no-resolve
+  - IP-CIDR,91.105.192.0/23,no-resolve
+  - IP-CIDR,149.154.172.0/22,no-resolve
+  - IP-CIDR,185.76.151.0/24,no-resolve
+  - IP-CIDR6,2001:b28:f23d::/48,no-resolve
+  - IP-CIDR6,2a0a:f280::/32,no-resolve
+
+  # >> TelegramIP NL
+  - IP-CIDR,91.108.4.0/22,no-resolve
+  - IP-CIDR,91.108.8.0/22,no-resolve
+  - IP-CIDR,91.108.20.0/22,no-resolve
+  - IP-CIDR,91.108.58.0/23,no-resolve
+  - IP-CIDR,149.154.160.0/22,no-resolve
+  - IP-CIDR,149.154.164.0/22,no-resolve
+  - IP-CIDR6,2001:67c:4e8::/48,no-resolve
+  - IP-CIDR6,2001:b28:f23c::/48,no-resolve
+  
   # >> Speedtest
   - DOMAIN-SUFFIX,cdnst.net
   - DOMAIN-SUFFIX,cellmaps.com
@@ -1904,13 +1922,10 @@ payload:
   - DOMAIN-SUFFIX,wiktionary.org
 
   # >> Meta
-  - DOMAIN,graph.facebook.com
   - DOMAIN-KEYWORD,facebook
   - DOMAIN-KEYWORD,fbcdn
   - DOMAIN-KEYWORD,instagram
   - DOMAIN-KEYWORD,whatsapp
-  - DOMAIN-SUFFIX,aboutfacebook.com
-  - DOMAIN-SUFFIX,accessfacebookfromschool.com
   - DOMAIN-SUFFIX,accountkit.com
   - DOMAIN-SUFFIX,acebooik.com
   - DOMAIN-SUFFIX,acebook.com
@@ -1919,8 +1934,6 @@ payload:
   - DOMAIN-SUFFIX,acheterdesfollowersinstagram.com
   - DOMAIN-SUFFIX,acheterfollowersinstagram.com
   - DOMAIN-SUFFIX,advancediddetection.com
-  - DOMAIN-SUFFIX,askfacebook.net
-  - DOMAIN-SUFFIX,askfacebook.org
   - DOMAIN-SUFFIX,atdmt2.com
   - DOMAIN-SUFFIX,atlasdmt.com
   - DOMAIN-SUFFIX,atlasonepoint.com
@@ -3244,26 +3257,3 @@ payload:
   - DOMAIN-SUFFIX,synology.com
   - DOMAIN-SUFFIX,synology.me
   - DOMAIN-KEYWORD,synology
-
-  # >> Tesla
-  - DOMAIN-SUFFIX,solarcity.com
-  - DOMAIN-SUFFIX,tesla-cdn.thron.cn
-  - DOMAIN-SUFFIX,tesla-cdn.thron.com
-  - DOMAIN-SUFFIX,tesla.cn
-  - DOMAIN-SUFFIX,tesla.com
-  - DOMAIN-SUFFIX,tesla.com.cn
-  - DOMAIN-SUFFIX,tesla.services
-  - DOMAIN-SUFFIX,teslaenergy.services
-  - DOMAIN-SUFFIX,teslamotors.cn
-  - DOMAIN-SUFFIX,teslamotors.com
-  - DOMAIN-SUFFIX,teslamotors.com.cn
-  - DOMAIN-SUFFIX,teslazta.net
-  - DOMAIN-SUFFIX,ts.la
-
-  # >> Cake
-  - DOMAIN,d1koerlbtsmkf8.cloudfront.net
-  - DOMAIN,d31wl6mro6753i.cloudfront.net
-  - DOMAIN,static-mycake.pstatic.net
-  - DOMAIN,vstatic-mycake.pstatic.net
-  - DOMAIN-SUFFIX,cakeapp.me
-  - DOMAIN-SUFFIX,mycake.me
