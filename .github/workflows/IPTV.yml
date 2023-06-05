@@ -43,12 +43,6 @@ jobs:
         curl -LR -o iptv/iptv.m3u "https://raw.githubusercontent.com/FaNGbABa/xiaobaishihundan/main/Live/maiduidui.m3u"
         curl -LR -o iptv/YueChan.m3u "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u"
         curl -LR -o iptv/fanmingming.m3u "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
-        curl -LR -o iptv/hklive.m3u "https://hkanime.live/raw.m3u"
-        sed -i '1d' iptv/hklive.m3u
-        sed -i 's/[RTHK] 香港電台/HKLive/g' iptv/hklive.m3u
-        sed -i 's/[Fan] 奇妙電視/HKLive/g' iptv/hklive.m3u
-        sed -i 's/[TVB] 電視廣播/HKLive/g' iptv/hklive.m3u
-        sed -i 's/[Viu] 香港電視娛樂/HKLive/g' iptv/hklive.m3u
         sed -i '1d' iptv/fanmingming.m3u
         sed -i 's/group-title="央视频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
         sed -i 's/group-title="港澳频道"/group-title="范明明-IPv6"/g' iptv/fanmingming.m3u
