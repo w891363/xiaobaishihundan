@@ -1,5 +1,8 @@
 payload:
 
+  # >> My List
+  - DOMAIN-SUFFIX,doppiocdn.com
+  
   # >> emby servers 
   - DOMAIN,direct.nebula-emby.com
   - DOMAIN,789.123456.al
