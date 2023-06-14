@@ -1,5 +1,5 @@
 payload:
-  # >> 自用去广告列表
+  # >> advertises
   - DOMAIN,aboard.apilocate.amap.com
   - DOMAIN,ad.bn.netease.com
   - DOMAIN,ad.yixin.im
@@ -12,7 +12,6 @@ payload:
   - DOMAIN,ads-video-qc.xhscdn.com
   - DOMAIN,ads.95516.com
   - DOMAIN,ads.youtube.com
-  - DOMAIN,adsfile.bssdlbig.kugou.com
   - DOMAIN,adsfs.oppomobile.com
   - DOMAIN,adsmind.apdcdn.tc.qq.com
   - DOMAIN,adsmind.gdtimg.com
@@ -72,8 +71,6 @@ payload:
   - DOMAIN-KEYWORD,ads-d.viber.com
   - DOMAIN-KEYWORD,ads.aws.viber.com
   - DOMAIN-KEYWORD,ads.viber.com
-  - DOMAIN-KEYWORD,adservice.kugou.com
-  - DOMAIN-KEYWORD,adsfilebssdlbig.ali.kugou.com
   - DOMAIN-KEYWORD,adstrategy.biz.weibo.com
   - DOMAIN-KEYWORD,adx-
   - DOMAIN-KEYWORD,alitui.weibo.com
@@ -85,7 +82,6 @@ payload:
   - DOMAIN-KEYWORD,biz.weibo.com.cn
   - DOMAIN-KEYWORD,c.biz.weibo.com
   - DOMAIN-KEYWORD,c.wcpt.biz.weibo.com
-  - DOMAIN-KEYWORD,c1img.ali.kugou.com
   - DOMAIN-KEYWORD,click.uve.weibo.com
   - DOMAIN-KEYWORD,dp.im.weibo.cn
   - DOMAIN-KEYWORD,dsp.edm.weibo.cn
@@ -95,27 +91,15 @@ payload:
   - DOMAIN-KEYWORD,game.weibo.com.cn
   - DOMAIN-KEYWORD,gw5.push.mcp.weibo.cn
   - DOMAIN-KEYWORD,gw6.push.mcp.weibo.cn
-  - DOMAIN-KEYWORD,kgipadstat.kugou.com
-  - DOMAIN-KEYWORD,kgipadstatbak.kugou.com
-  - DOMAIN-KEYWORD,kgstaticdlbssdlbig.tx.kugou.com
-  - DOMAIN-KEYWORD,logwebs.kugou.com
   - DOMAIN-KEYWORD,m.game.weibo.cn
   - DOMAIN-KEYWORD,mobilead.kuwo.cn
-  - DOMAIN-KEYWORD,nbcollect.kugou.com
-  - DOMAIN-KEYWORD,nbcollectretry.kugou.com
   - DOMAIN-KEYWORD,ossgw.alicdn.com
   - DOMAIN-KEYWORD,p3.pstatp.com
   - DOMAIN-KEYWORD,p6-ad-sign.byteimg.com
   - DOMAIN-KEYWORD,promote.biz.weibo.cn
   - DOMAIN-KEYWORD,rich.kuwo.cn
-  - DOMAIN-KEYWORD,rt-m.kugou.com
-  - DOMAIN-KEYWORD,rtmretry.kugou.com
   - DOMAIN-KEYWORD,s.alitui.weibo.com
   - DOMAIN-KEYWORD,sdkapp.uve.weibo.com
-  - DOMAIN-KEYWORD,searchrecommend.kugou.com
-  - DOMAIN-KEYWORD,splashimgbssdl.yun.kugou.com
-  - DOMAIN-KEYWORD,tracker.kugou.com
-  - DOMAIN-KEYWORD,trackercdnbj.kugou.com
   - DOMAIN-KEYWORD,tui.weibo.com
   - DOMAIN-KEYWORD,vs.biz.weibo.com
   - DOMAIN-KEYWORD,wax.weibo.com
@@ -155,7 +139,6 @@ payload:
   - DOMAIN-SUFFIX,ads.heytapmobi.com
   - DOMAIN-SUFFIX,ads.msn.com
   - DOMAIN-SUFFIX,ads.oppomobile.com
-  - DOMAIN-SUFFIX,ads.service.kugou.com
   - DOMAIN-SUFFIX,ads1.msn.com
   - DOMAIN-SUFFIX,ads2.msn.com
   - DOMAIN-SUFFIX,adsclick.qq.com
@@ -165,8 +148,6 @@ payload:
   - DOMAIN-SUFFIX,adsebs.ximalaya.com
   - DOMAIN-SUFFIX,adsense.html5.qq.com
   - DOMAIN-SUFFIX,adservice.sigmob.cn
-  - DOMAIN-SUFFIX,adserviceretry.kugou.com
-  - DOMAIN-SUFFIX,adsfile.bssdlbig.kugou.com
   - DOMAIN-SUFFIX,adsfile.qq.com
   - DOMAIN-SUFFIX,adsgroup.qq.com
   - DOMAIN-SUFFIX,adshmct.qq.com
@@ -236,7 +217,6 @@ payload:
   - DOMAIN-SUFFIX,canvas.gdt.qq.com
   - DOMAIN-SUFFIX,cdn-api-verify.mob.com
   - DOMAIN-SUFFIX,cfg.imtt.qq.com
-  - DOMAIN-SUFFIX,channel.fanxing.kugou.com
   - DOMAIN-SUFFIX,click.mz.simba.taobao.com
   - DOMAIN-SUFFIX,click.simba.taobao.com
   - DOMAIN-SUFFIX,click.tz.simba.taobao.com
@@ -252,7 +232,6 @@ payload:
   - DOMAIN-SUFFIX,cm.track.biligame.bilibili.com
   - DOMAIN-SUFFIX,crashlytics.com
   - DOMAIN-SUFFIX,d.gdt.qq.com
-  - DOMAIN-SUFFIX,d.kugou.com
   - DOMAIN-SUFFIX,d.qchannel03.cn
   - DOMAIN-SUFFIX,d3g.qq.com
   - DOMAIN-SUFFIX,da.netease.com
@@ -263,7 +242,6 @@ payload:
   - DOMAIN-SUFFIX,dm.pstatp.com
   - DOMAIN-SUFFIX,doubleclick.net
   - DOMAIN-SUFFIX,download.sj.qq.com
-  - DOMAIN-SUFFIX,downmobile.kugou.com
   - DOMAIN-SUFFIX,dp3.qq.com
   - DOMAIN-SUFFIX,dsp-x.jd.com
   - DOMAIN-SUFFIX,dsp.simba.taobao.com
@@ -278,16 +256,11 @@ payload:
   - DOMAIN-SUFFIX,firebase.io
   - DOMAIN-SUFFIX,fusion.qq.com
   - DOMAIN-SUFFIX,g1.163.com
-  - DOMAIN-SUFFIX,gad.kugou.com
   - DOMAIN-SUFFIX,game.html5.qq.com
-  - DOMAIN-SUFFIX,game.kugou.com
   - DOMAIN-SUFFIX,game.kuwo.cn
   - DOMAIN-SUFFIX,game.weibo.cn
   - DOMAIN-SUFFIX,game.weibo.com
-  - DOMAIN-SUFFIX,gamebox.kugou.com
-  - DOMAIN-SUFFIX,gcapi.sy.kugou.com
   - DOMAIN-SUFFIX,gdt.qq.com
-  - DOMAIN-SUFFIX,gg.kugou.com
   - DOMAIN-SUFFIX,ggmmqq.com
   - DOMAIN-SUFFIX,google-analytics.com
   - DOMAIN-SUFFIX,google.cn
@@ -310,8 +283,6 @@ payload:
   - DOMAIN-SUFFIX,iadmusicmatvideo.music.126.net
   - DOMAIN-SUFFIX,img.ffzypic.com
   - DOMAIN-SUFFIX,imp.voiceads.cn
-  - DOMAIN-SUFFIX,install.kugou.com
-  - DOMAIN-SUFFIX,install2.kugou.com
   - DOMAIN-SUFFIX,ios.bugly.qq.com
   - DOMAIN-SUFFIX,irc.drapro1.com
   - DOMAIN-SUFFIX,j.wit.qq.com
@@ -320,8 +291,6 @@ payload:
   - DOMAIN-SUFFIX,jrlt.beacon.qq.com
   - DOMAIN-SUFFIX,js-ad.a.yximgs.com
   - DOMAIN-SUFFIX,jsqmt.qq.com
-  - DOMAIN-SUFFIX,kgmobilestat.kugou.com
-  - DOMAIN-SUFFIX,kgmobilestatbak.kugou.com
   - DOMAIN-SUFFIX,kuwoyy.com
   - DOMAIN-SUFFIX,kwmsg.kuwo.cn
   - DOMAIN-SUFFIX,l.qq.com
@@ -334,8 +303,6 @@ payload:
   - DOMAIN-SUFFIX,log-alibaba-taobao-douyin.cdn.bcebos.com
   - DOMAIN-SUFFIX,log-verify.mob.com
   - DOMAIN-SUFFIX,log.qchannel03.cn
-  - DOMAIN-SUFFIX,log.stat.kugou.com
-  - DOMAIN-SUFFIX,log.web.kugou.com
   - DOMAIN-SUFFIX,logs.amap.com
   - DOMAIN-SUFFIX,m-adash.m.taobao.com
   - DOMAIN-SUFFIX,m.mpl.dutils.com
@@ -350,22 +317,17 @@ payload:
   - DOMAIN-SUFFIX,mfm.video.qq.com
   - DOMAIN-SUFFIX,mi.gdt.qq.com
   - DOMAIN-SUFFIX,mini2015.qq.com
-  - DOMAIN-SUFFIX,minidcsc.kugou.com
-  - DOMAIN-SUFFIX,mo.kugou.com
   - DOMAIN-SUFFIX,mo.res.wpscdn.cn
   - DOMAIN-SUFFIX,mob.com
   - DOMAIN-SUFFIX,mobilead.kuwo.cn
   - DOMAIN-SUFFIX,mobileads.google.com
-  - DOMAIN-SUFFIX,mobilelog.kugou.com
   - DOMAIN-SUFFIX,monitor.uu.qq.com
   - DOMAIN-SUFFIX,mqqad.cs0309.html5.qq.com
   - DOMAIN-SUFFIX,mqqad.html5.qq.com
   - DOMAIN-SUFFIX,mqqadr.reader.qq.com
   - DOMAIN-SUFFIX,msclick2.kuwo.cn
-  - DOMAIN-SUFFIX,msg.mobile.kugou.com
   - DOMAIN-SUFFIX,msphoneclick.kuwo.cn
   - DOMAIN-SUFFIX,mtrace.qq.com
-  - DOMAIN-SUFFIX,mvads.kugou.com
   - DOMAIN-SUFFIX,nc.gdt.qq.com
   - DOMAIN-SUFFIX,news-l.play.ott.video.qq.com
   - DOMAIN-SUFFIX,news.l.qq.com
@@ -379,7 +341,6 @@ payload:
   - DOMAIN-SUFFIX,oth.eve.mdt.qq.com
   - DOMAIN-SUFFIX,oth.str.mdt.qq.com
   - DOMAIN-SUFFIX,oth.update.mdt.qq.com
-  - DOMAIN-SUFFIX,p.kugou.com
   - DOMAIN-SUFFIX,p1-feedback.byteimg.com
   - DOMAIN-SUFFIX,p1.meituan.net
   - DOMAIN-SUFFIX,p3-be-pack-sign.pglstatp-toutiao.com
@@ -401,7 +362,6 @@ payload:
   - DOMAIN-SUFFIX,pingtcss.qq.com
   - DOMAIN-SUFFIX,pmir.3g.qq.com
   - DOMAIN-SUFFIX,promote.biz.weibo.cn
-  - DOMAIN-SUFFIX,push.mobile.kugou.com
   - DOMAIN-SUFFIX,pv.sohu.com
   - DOMAIN-SUFFIX,pvstat.html5.qq.com
   - DOMAIN-SUFFIX,q.i.gdt.qq.com
@@ -414,7 +374,6 @@ payload:
   - DOMAIN-SUFFIX,report.meituan.com
   - DOMAIN-SUFFIX,rich.kuwo.cn
   - DOMAIN-SUFFIX,rm.gdt.qq.com
-  - DOMAIN-SUFFIX,rtmonitor.kugou.com
   - DOMAIN-SUFFIX,s.alitui.weibo.com
   - DOMAIN-SUFFIX,s.jpush.cn
   - DOMAIN-SUFFIX,sc.ffsevhuy.com
@@ -428,7 +387,6 @@ payload:
   - DOMAIN-SUFFIX,sdk.open.talk.getui.net
   - DOMAIN-SUFFIX,sdkapp.uve.weibo.com
   - DOMAIN-SUFFIX,sdktmp.hubcloud.com.cn
-  - DOMAIN-SUFFIX,sdn.kugou.com
   - DOMAIN-SUFFIX,sentry.io
   - DOMAIN-SUFFIX,setting.snswin.qq.com
   - DOMAIN-SUFFIX,sf3-fe-tos.pglstatp-toutiao.com
@@ -436,7 +394,6 @@ payload:
   - DOMAIN-SUFFIX,simba.m.taobao.com
   - DOMAIN-SUFFIX,sis.jpush.io
   - DOMAIN-SUFFIX,sngmta.qq.com
-  - DOMAIN-SUFFIX,song.fanxing.kugou.com
   - DOMAIN-SUFFIX,srd.simba.taobao.com
   - DOMAIN-SUFFIX,stat.simba.taobao.com
   - DOMAIN-SUFFIX,stg-data.ads.heytapmobi.com
@@ -464,7 +421,6 @@ payload:
   - DOMAIN-SUFFIX,umeng.com.gds.alibabadns.com
   - DOMAIN-SUFFIX,union.youdao.com
   - DOMAIN-SUFFIX,unitacs.m.taobao.com
-  - DOMAIN-SUFFIX,update.mobile.kugou.com
   - DOMAIN-SUFFIX,updatecenter.qq.com
   - DOMAIN-SUFFIX,updatepage.kuwo.cn
   - DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com
@@ -489,7 +445,6 @@ payload:
   - DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com
   - DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
   - DOMAIN-SUFFIX,xlog.jd.com
-  - DOMAIN-SUFFIX,youxi.kugou.com
   - DOMAIN-SUFFIX,zhanzhang.toutiao.com
   - DOMAIN-SUFFIX,zymo.mps.weibo.com
   - DOMAIN-SUFFIX,zz.bdstatic.com
