@@ -1,0 +1,19 @@
+payload:
+  # >> PikPak
+  - DOMAIN,access.mypikpak.com
+  - DOMAIN,cloud.aim-hero.site
+  - DOMAIN,cloud2.aim-hero.site
+  - DOMAIN,down.aim-hero.site
+  - DOMAIN,sushao.aim-hero.site
+  - DOMAIN-KEYWORD,dl-a10b
+  - DOMAIN-KEYWORD,mypikpak
+  - DOMAIN-KEYWORD,pikpak
+  - DOMAIN-SUFFIX,dlandroid.rcv.sandai.net
+  - DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net
+  - DOMAIN-SUFFIX,hub5pn.wap.sandai.net
+  - DOMAIN-SUFFIX,hub5pnc.sandai.net
+  - DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net
+  - DOMAIN-SUFFIX,hubciddata.sandai.net
+  - DOMAIN-SUFFIX,mypikpak.com
+  - DOMAIN-SUFFIX,pikpak.com
+  - PROCESS-NAME,com.pikcloud.pikpak
