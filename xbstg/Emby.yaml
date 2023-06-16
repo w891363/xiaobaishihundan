@@ -1,0 +1,6 @@
+payload:
+  # >> emby servers 
+  - DOMAIN,direct.nebula-emby.com
+  - DOMAIN,789.123456.al
+  - DOMAIN,ju.dog
+  - IP-CIDR,202.61.255.248/32,no-resolve 
